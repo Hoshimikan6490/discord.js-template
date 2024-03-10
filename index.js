@@ -50,7 +50,9 @@ client.once("ready", async () => {
   }, 10000);
 
   //起動したことを、開発ログ用のチャンネルに送信
-  client.channels.cache.get("889486664760721418").send("起動しました！");
+  client.channels.cache
+    .get(process.env.ConsoleChannelId)
+    .send("起動しました！");
 });
 
 //interactionが発行された時に何をするかを設定

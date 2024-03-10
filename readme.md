@@ -25,10 +25,19 @@ npm i
 6. 左側のメニューの「Bot」選択
 7. 右側の「Reset Token」を押して、tokenをコピーする
 8. プログラムの編集画面に戻り、「.env.example」の「TOKEN=」の後の文字列を先ほどコピーしたtokenに置き換える
-9. 「.env.example」というファイルを、「.env」という名前に変更する
-10. ターミナルで、次のコマンドを実行する
+9. 同じく「.env.example」の「ConsoleChannelId=」の後の数字をご自身のログ用DiscordチャンネルのチャンネルIDに変更する
+10. 「.env.example」というファイルを、「.env」という名前に変更する
+11. ターミナルで、次のコマンドを実行する
 ```
 node index.js
+```
+
+※ログ用のチャンネル（手順の９）を使用しない場合は、index.jsの52~55行目の次の文字列を削除してください。
+```js
+  //起動したことを、開発ログ用のチャンネルに送信
+  client.channels.cache
+    .get(process.env.ConsoleChannelId)
+    .send("起動しました！");
 ```
 
 # このコードの利用について
