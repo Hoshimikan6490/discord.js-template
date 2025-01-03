@@ -7,6 +7,7 @@ const {
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
+  MessageFlags,
 } = require("discord.js");
 require("dotenv").config();
 
@@ -79,7 +80,7 @@ client.on("interactionCreate", async (interaction) => {
       //ユーザーには、内部エラーが発生した旨のみを伝える。
       await interaction.reply({
         content: "内部エラーが発生しました。管理者にお問い合わせください。",
-        ephemeral: true,
+        flags: MessageFlags.Ephemeral,
       });
     }
   }
