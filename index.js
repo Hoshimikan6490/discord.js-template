@@ -9,7 +9,7 @@ const {
   ButtonStyle,
   MessageFlags,
 } = require("discord.js");
-require("dotenv").config();
+require("dotenv").config({ quiet: true });
 
 //Discordのclientを設定
 const client = new Client({
