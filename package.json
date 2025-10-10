@@ -1,18 +1,26 @@
 {
-  "name": "discord.js-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^14.22.1"
-  },
-  "devDependencies": {
-    "dotenv": "^17.2.3",
-    "fs": "^0.0.1-security"
-  }
+	"name": "discord.js-template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"main": "node index.js",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"format:lint": "prettier --write . && eslint . --fix"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"discord.js": "^14.23.2"
+	},
+	"devDependencies": {
+		"dotenv": "^17.2.3",
+		"eslint": "^9.37.0",
+		"eslint-config-prettier": "^10.1.8",
+		"fs": "^0.0.1-security",
+		"prettier": "^3.6.2"
+	}
 }
