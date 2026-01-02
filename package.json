@@ -18,9 +18,9 @@
 	},
 	"devDependencies": {
 		"dotenv": "^17.2.3",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
 		"fs": "^0.0.1-security",
-		"prettier": "^3.7.2"
+		"prettier": "^3.7.4"
 	}
 }
